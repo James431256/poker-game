@@ -4,7 +4,13 @@ A 6-max no-limit hold'em trainer that runs in the browser. You play cash games a
 
 There are no dependencies and no build step: it's plain ES modules plus a tiny Node static server.
 
-## Running it
+## Play online
+
+**▶ https://james431256.github.io/poker-game/**
+
+The site deploys automatically from `main` via GitHub Actions (`.github/workflows/pages.yml`): tests run first, then `index.html`, `styles.css` and `src/` are published. One-time setup: **Settings → Pages → Source: GitHub Actions**.
+
+## Running it locally
 
 ```bash
 npm start            # → http://localhost:8080   (PORT=3000 npm start for another port)
