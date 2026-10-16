@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Poker Trainer</title>
+  <meta name="description" content="6-max no-limit hold'em trainer with a live coach, decision grading, drills and stats." />
+  <meta name="theme-color" content="#0f1512" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♠</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-suit">♠</span> Poker Trainer</div>
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <button data-view="play" class="active">Play</button>
+      <button data-view="trainer">Preflop</button>
+      <button data-view="drills">Drills</button>
+      <button data-view="quiz">Quiz</button>
+      <button data-view="review">Review</button>
+      <button data-view="stats">Stats</button>
+      <button data-view="glossary">Glossary</button>
+    </nav>
+    <div class="level-badge" id="level-badge" title="Table level"></div>
+  </header>
+
+  <main>
+    <section class="view active" id="view-play" aria-label="Play"></section>
+    <section class="view" id="view-trainer" aria-label="Preflop chart trainer"></section>
+    <section class="view" id="view-drills" aria-label="Spot drills"></section>
+    <section class="view" id="view-quiz" aria-label="Quiz"></section>
+    <section class="view" id="view-review" aria-label="Hand review"></section>
+    <section class="view" id="view-stats" aria-label="Stats"></section>
+    <section class="view" id="view-glossary" aria-label="Glossary"></section>
+  </main>
+
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+  <noscript>This trainer needs JavaScript.</noscript>
+  <script type="module" src="src/ui/app.js"></script>
+</body>
+</html>
